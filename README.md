@@ -166,7 +166,8 @@ The role mapping was successfully completed.
 ________________________________________
 
 
-##3. Access Token Generation
+
+ ## 3. Access Token Generation
 
 An access token was generated for the user testuser using Keycloak.
 The token contains user identity and role-related information in JSON format.
@@ -175,6 +176,8 @@ This confirms successful integration of role-based access control.
 
 <img width="940" height="528" alt="image" src="https://github.com/user-attachments/assets/eb04133f-79eb-4ca4-bb99-49fdb16623df" />
 ________________________________________
+
+
 ## 4. Role Verification in Token:
 
 The access token generated for testuser was analyzed to verify role assignment.
@@ -195,6 +198,8 @@ This enables secure communication between the application and Keycloak.
 
 <img width="940" height="483" alt="image" src="https://github.com/user-attachments/assets/7ee9c8b2-82d7-43ee-ab9f-d0d63e593d94" />
 ________________________________________
+
+
 ## 6. Flask Application Setup
 A basic Flask application was successfully created and executed.
 The application runs on localhost port 5000 and serves as a test interface.
