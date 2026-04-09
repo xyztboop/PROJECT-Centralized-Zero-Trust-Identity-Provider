@@ -5,6 +5,7 @@ Centralized Zero Trust Identity Provider (NexusAuth)
 This project aims to develop a Centralized Identity and Access Management (IAM) system using modern Zero Trust principles. The system, named NexusAuth, is designed to provide secure authentication and authorization across multiple applications.
 The primary objective of Week 1 was to set up the foundational infrastructure required for identity management using Keycloak and ensure successful access to the administrative interface.
 ________________________________________
+
 ## 2. Objective of Week 1
 •	Install and configure Docker environment 
 
@@ -16,6 +17,7 @@ ________________________________________
 
 •	Create a dedicated project realm
 ________________________________________
+
 ## 3. Environment Setup
 
 The project was implemented in a virtualized environment with the following configuration:
@@ -30,6 +32,7 @@ The project was implemented in a virtualized environment with the following conf
 
 •	Host System: Windows
 ________________________________________
+
 ## 4. Docker Installation and Verification
 Docker was installed on the Ubuntu virtual machine to enable containerized deployment of Keycloak.
 Commands used:
@@ -46,6 +49,7 @@ Docker service was started and enabled successfully. This ensured that the syste
 
 <img width="940" height="272" alt="image" src="https://github.com/user-attachments/assets/fea1d5f3-b426-44a2-8b65-ba10e4577217" />
  ________________________________________
+
 ## 5. Deployment of Keycloak Server
 
 Keycloak was deployed using Docker in development mode.
@@ -63,6 +67,7 @@ Listening on: http://0.0.0.0:8080
 ***
 <img width="902" height="271" alt="image" src="https://github.com/user-attachments/assets/4f41f1b8-510e-4a4c-a1d5-25fc00994b5d" />
 ________________________________________
+
 ## 6. Connectivity Verification
 Initial browser access attempts resulted in connection issues due to VM networking limitations. 
 
@@ -76,6 +81,7 @@ curl http://localhost:8080
 The server responded with HTTP status and redirect headers, confirming that Keycloak was running correctly
 <img width="940" height="409" alt="image" src="https://github.com/user-attachments/assets/207d0efc-3536-4562-80fb-d93cca541693" />
 ________________________________________
+
 ## 7. Accessing Keycloak Admin Console
 The Keycloak Admin Console was successfully accessed using:
 ***
@@ -92,6 +98,7 @@ Successful login confirmed that the IAM system was operational.
 
  <img width="940" height="296" alt="image" src="https://github.com/user-attachments/assets/d9a45227-1de4-43ed-8cde-33a4da1b8d83" />
 ________________________________________
+
 ## 8. Realm Creation
 
 A new realm was created to represent the project environment.
@@ -116,6 +123,8 @@ Set credentials:
 
 <img width="940" height="427" alt="image" src="https://github.com/user-attachments/assets/2e97f2ae-cdcc-46d3-817a-1e68cab33aa8" />
 ________________________________________
+
+
 ## 9. Outcome of Week 1
 By the end of Week 1, the following milestones were achieved:
 •	Docker environment successfully configured
@@ -124,12 +133,15 @@ By the end of Week 1, the following milestones were achieved:
 •	Project-specific realm created
 This establishes a strong foundation for implementing authentication, authorization, and security policies in subsequent weeks.
 ________________________________________
-10. Conclusion
+
+
+## 10. Conclusion
 Week 1 focused on setting up the core infrastructure required for the IAM system. Despite initial networking challenges, the system was successfully deployed and accessed. The creation of the project realm marks the beginning of actual IAM configuration.
 Future work will involve user management, role-based access control (RBAC), and application integration.
 ________________________________________
                            Week 2 (Application Integration + RBAC) 
 ________________________________________
+
 
 ## 1.	Create role: admin
 
@@ -140,6 +152,8 @@ The role was successfully created and is ready for assignment.
 
 <img width="940" height="302" alt="image" src="https://github.com/user-attachments/assets/48f1aa0c-ad76-4b2c-ad77-edc10f56c2a6" />
 ________________________________________
+
+
 ## 2.	Role Assignment
 The admin role was assigned to the user testuser in the nexus-auth realm.
 This enables the user to have administrative privileges within the system.
@@ -150,7 +164,9 @@ The role mapping was successfully completed.
 
 <img width="940" height="513" alt="image" src="https://github.com/user-attachments/assets/9954bf49-8817-4872-954c-a5fb75bf6836" /> 
 ________________________________________
-## Access Token Generation
+
+
+##3. Access Token Generation
 
 An access token was generated for the user testuser using Keycloak.
 The token contains user identity and role-related information in JSON format.
@@ -159,7 +175,7 @@ This confirms successful integration of role-based access control.
 
 <img width="940" height="528" alt="image" src="https://github.com/user-attachments/assets/eb04133f-79eb-4ca4-bb99-49fdb16623df" />
 ________________________________________
-## Role Verification in Token:
+## 4. Role Verification in Token:
 
 The access token generated for testuser was analyzed to verify role assignment.
 The admin role was successfully found within the token under realm_access.
@@ -168,7 +184,9 @@ The system can now enforce permissions based on assigned roles.
 
 <img width="705" height="683" alt="image" src="https://github.com/user-attachments/assets/9648f9cd-e8a7-4e02-83f0-f4d3b5a87251" /> 
 ________________________________________
-## Client Configuration
+
+
+## 5. Client Configuration
 
 A client named flask-app was created in the nexus-auth realm.
 The redirect URI was configured to allow authentication via localhost.
@@ -177,7 +195,7 @@ This enables secure communication between the application and Keycloak.
 
 <img width="940" height="483" alt="image" src="https://github.com/user-attachments/assets/7ee9c8b2-82d7-43ee-ab9f-d0d63e593d94" />
 ________________________________________
-## Flask Application Setup
+## 6. Flask Application Setup
 A basic Flask application was successfully created and executed.
 The application runs on localhost port 5000 and serves as a test interface.
 This confirms that the development environment is properly configured.
@@ -203,7 +221,9 @@ Application intergration completed.
 ________________________________________
                                    WEEK 3: MFA + SECURITY HARDENING
 ________________________________________
- ## 1 Multi-Factor Authentication (OTP Setup):
+
+
+## 1 Multi-Factor Authentication (OTP Setup):
   Multi-Factor Authentication (MFA) was implemented using OTP in Keycloak.
 The user was required to configure OTP during login using an authenticator app.
 A QR code was scanned to generate time-based one-time passwords.
@@ -215,6 +235,8 @@ This enhances security by adding a second layer of authentication.
 
 <img width="940" height="195" alt="image" src="https://github.com/user-attachments/assets/df88cb58-5968-4acb-a15a-9f7eb1276792" />
 ________________________________________
+
+
 ## 2.Brute Force Protection:
 Brute force detection was enabled in Keycloak to prevent unauthorized access.
 The system temporarily locks user accounts after multiple failed login attempts.
@@ -225,6 +247,8 @@ It enhances overall system security and user account protection.
 
 <img width="940" height="599" alt="image" src="https://github.com/user-attachments/assets/d5f7d073-e24e-48d8-a784-37410d4f0c44" /> 
 ________________________________________
+
+
 ## Security Hardening:
 
 Security features such as multi-factor authentication (OTP), brute force protection, and password policies were implemented.
@@ -236,6 +260,8 @@ Strong password policies enforce secure credential creation.
 ________________________________________
                                    WEEk4: LOGGING + FINAL TOUCHES                                 
 ________________________________________
+
+
 ## Objective:
  1. Enable Event Logging
 •	Track login/logout 
@@ -249,6 +275,8 @@ ________________________________________
 •	Change login theme 
 • Make it look custom 
 ________________________________________
+
+
 ## 1.Event Logging and Monitoring
 Event logging was enabled in Keycloak to track user activities.
 User events such as login, logout, and authentication errors are recorded.
@@ -263,12 +291,16 @@ It enhances auditing and security analysis capabilities.
 
 <img width="940" height="318" alt="image" src="https://github.com/user-attachments/assets/5f7dbb17-0402-4c06-9c4c-d3a055531e6f" />
 ________________________________________
+
+
 ## Conclusion
 The project successfully demonstrated the implementation of an Identity and Access Management (IAM) system using Keycloak.
 It covered user authentication, role-based access control, and secure application integration.
 Advanced security features such as multi-factor authentication, brute force protection, and password policies were implemented.
 Event logging and monitoring ensured proper tracking of user activities, making the system secure and reliable.
 ________________________________________
+
+
 ## Skills Gained
 •	Understanding of Identity and Access Management (IAM) concepts 
 •	Hands-on experience with Keycloak configuration and administration 
