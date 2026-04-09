@@ -295,6 +295,7 @@ It enhances auditing and security analysis capabilities.
 <img width="940" height="359" alt="image" src="https://github.com/user-attachments/assets/87ec6ab3-b857-4dc4-b283-425cf9500822" />
 
 <img width="940" height="318" alt="image" src="https://github.com/user-attachments/assets/5f7dbb17-0402-4c06-9c4c-d3a055531e6f" />
+
 ________________________________________
 
 
@@ -308,10 +309,20 @@ ________________________________________
 
 ## Skills Gained
 •	Understanding of Identity and Access Management (IAM) concepts 
+
+
 •	Hands-on experience with Keycloak configuration and administration 
+
+
 •	Implementation of Role-Based Access Control (RBAC) 
+
+
 •	Integration of Single Sign-On (SSO) with a Flask application 
+
+
 •	Implementation of Multi-Factor Authentication (OTP) 
+
+
 •	Knowledge of security features like brute force protection and password policies 
 ________________________________________
 
