@@ -39,9 +39,9 @@ sudo apt install docker.io -y
 '''
 
 Verification:
-"""
+***
 docker --version
-"""
+***
 Docker service was started and enabled successfully. This ensured that the system was ready to run containerized applications.
 
 
