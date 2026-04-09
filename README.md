@@ -33,10 +33,10 @@ ________________________________________
 ## 4. Docker Installation and Verification
 Docker was installed on the Ubuntu virtual machine to enable containerized deployment of Keycloak.
 Commands used:
-'''
+***
 sudo apt update
 sudo apt install docker.io -y
-'''
+***
 
 Verification:
 ***
